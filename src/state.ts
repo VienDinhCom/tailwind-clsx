@@ -1,19 +1,26 @@
 import { useState, useCallback } from 'react';
 
-export function useSafeState<T>(initialState: T): [T, (updater: T | ((prevState: T) => T)) => void] {
-  const [state, setState] = useState<T>(structuredClone(initialState));
+type Setter<T> = T | ((prevState: T) => T);
 
-  const setStateWithClone = useCallback((updater: T | ((prevState: T) => T)) => {
-    if (typeof updater === 'function') {
+function isFunction<T>(value: Setter<T>): value is (prevState: T) => T {
+  return typeof value === 'function';
+}
+
+export function useSafeState<T>(initialState: T) {
+  const [state, setState] = useState<T>(Object.freeze(initialState));
+
+  const setSafeState = useCallback(
+    (update: Setter<T>) => {
       setState((prevState) => {
-        const updaterFn = updater as (prevState: T) => T;
-        const nextState = updaterFn(structuredClone(prevState));
-        return structuredClone(nextState);
-      });
-    } else {
-      setState(structuredClone(updater));
-    }
-  }, []);
+        const draft = structuredClone(prevState);
 
-  return [Object.freeze(state), setStateWithClone];
+        const newState = isFunction(update) ? update(draft) : update;
+
+        return Object.freeze(newState);
+      });
+    },
+    [state]
+  );
+
+  return [state, setSafeState] as const;
 }
