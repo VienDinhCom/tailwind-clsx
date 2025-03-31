@@ -10,7 +10,7 @@ export function useSafeState<T>(initialState: T) {
   const [state, setState] = useState<T>(Object.freeze(initialState));
 
   const setSafeState = useCallback(
-    (update: Setter<T>) => {
+    (update: T | Setter<T>) => {
       setState((prevState) => {
         const draft = structuredClone(prevState);
 
