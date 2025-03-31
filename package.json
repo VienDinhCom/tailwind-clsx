@@ -1,6 +1,6 @@
 {
   "name": "spats",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "license": "MIT",
   "type": "module",
   "main": "index.cjs",

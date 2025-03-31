@@ -1,23 +1,21 @@
 import { useState, useCallback } from 'react';
 
-type Setter<T> = (draft: T) => void | T;
-
 export function useSafeState<T>(initialState: T) {
-  const [state, setState] = useState<T>(Object.freeze(initialState));
+  const [state, setState] = useState<T>(structuredClone(initialState));
 
-  const setSafeState = useCallback(
-    (setter: Setter<T>) => {
-      if (typeof setter === 'function') {
-        const draft = structuredClone(state);
-        const result = setter(draft);
+  const setStateWithClone = useCallback((updater: T | ((prevState: T) => T)) => {
+    if (typeof updater === 'function') {
+      setState((prevState) => {
+        const updaterFn = updater as (prevState: T) => T;
 
-        setState(Object.freeze(result === undefined ? draft : result));
-      } else {
-        setState(Object.freeze(setter));
-      }
-    },
-    [state]
-  );
+        const nextState = updaterFn(structuredClone(prevState));
 
-  return [state, setSafeState];
+        return structuredClone(nextState);
+      });
+    } else {
+      setState(structuredClone(updater));
+    }
+  }, []);
+
+  return [Object.freeze(state), setStateWithClone];
 }
