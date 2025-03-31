@@ -1,6 +1,6 @@
 {
   "name": "spats",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "license": "MIT",
   "type": "module",
   "main": "index.cjs",
@@ -8,8 +8,7 @@
   "types": "index.d.ts",
   "scripts": {
     "build": "tsup",
-    "dev": "tsup --watch",
-    "publish": "./publish.sh"
+    "dev": "tsup --watch"
   },
   "dependencies": {
     "clsx": "^2.1.1",
