@@ -6,7 +6,7 @@ Utility function for conditionally joining and merging Tailwind CSS classes with
 import { twc } from 'tailwind-clsx';
 
 twc('px-2 py-1 bg-red hover:bg-dark-red', 'p-3 bg-[#B91C1C]');
-// → 'hover:bg-dark-red p-3 bg-[#B91C1C]'
+//=> 'hover:bg-dark-red p-3 bg-[#B91C1C]'
 
 // Strings (variadic)
 twc('foo', true && 'bar', 'baz');
