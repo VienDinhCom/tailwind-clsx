@@ -6,27 +6,27 @@ Utility function for conditionally joining and merging Tailwind CSS classes with
 
 ### For Tailwind CSS v4
 
+Documents: [clsx](https://github.com/lukeed/clsx) & [tailwind-merge](https://github.com/dcastil/tailwind-merge)
+
 ```
 npm install tailwind-clsx@~4.0.0
 ```
 
-Documents: [clsx](https://github.com/lukeed/clsx) & [merge](https://github.com/dcastil/tailwind-merge)
-
 ### For Tailwind CSS v3
+
+Documents: [clsx](https://github.com/lukeed/clsx/tree/v2.1.1) & [tailwind-merge](https://github.com/dcastil/tailwind-merge/tree/v2.6.0)
 
 ```
 npm install tailwind-clsx@~3.0.0
 ```
 
-Documents: [clsx](https://github.com/lukeed/clsx/tree/v2.1.1) & [merge](https://github.com/dcastil/tailwind-merge/tree/v2.6.0)
-
 ### For Tailwind CSS v2
+
+Documents: [clsx](https://github.com/lukeed/clsx/tree/v2.1.1) & [tailwind-merge](https://github.com/dcastil/tailwind-merge/tree/v2.6.0)
 
 ```
 npm install tailwind-clsx@~2.0.0
 ```
-
-Documents: [clsx](https://github.com/lukeed/clsx/tree/v1.1.1) & [merge](https://github.com/dcastil/tailwind-merge/tree/v0.9.0)
 
 ## Demonstration
 
