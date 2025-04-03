@@ -4,6 +4,8 @@ Utility function for conditionally joining and merging Tailwind CSS classes with
 
 ## Installation
 
+Please install the package following SemVer carefully to ensure compatibility with your Tailwind CSS versions in your projects.
+
 ### For Tailwind CSS v4
 
 Documents: [clsx](https://github.com/lukeed/clsx) & [tailwind-merge](https://github.com/dcastil/tailwind-merge)
