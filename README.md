@@ -2,27 +2,33 @@
 
 Utility function for conditionally joining and merging Tailwind CSS classes without style conflicts.
 
-# Installation
+## Installation
 
-For Tailwind CSS v4
+### For Tailwind CSS v4
 
 ```
 npm install tailwind-clsx@~4.0.0
 ```
 
-For Tailwind CSS v3
+Documents: [clsx](https://github.com/lukeed/clsx) & [merge](https://github.com/dcastil/tailwind-merge)
+
+### For Tailwind CSS v3
 
 ```
 npm install tailwind-clsx@~3.0.0
 ```
 
-For Tailwind CSS v2
+Documents: [clsx](https://github.com/lukeed/clsx/tree/v2.1.1) & [merge](https://github.com/dcastil/tailwind-merge/tree/v2.6.0)
+
+### For Tailwind CSS v2
 
 ```
 npm install tailwind-clsx@~2.0.0
 ```
 
-# Demonstration
+Documents: [clsx](https://github.com/lukeed/clsx/tree/v1.1.1) & [merge](https://github.com/dcastil/tailwind-merge/tree/v0.9.0)
+
+## Demonstration
 
 ```ts
 import { cn } from 'tailwind-clsx';
