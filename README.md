@@ -7,19 +7,19 @@ Utility function for conditionally joining and merging Tailwind CSS classes with
 For Tailwind CSS v4
 
 ```
-npm i tailwind-clsx@~4.0.0
+npm install tailwind-clsx@~4.0.0
 ```
 
 For Tailwind CSS v3
 
 ```
-npm i tailwind-clsx@~3.0.0
+npm install tailwind-clsx@~3.0.0
 ```
 
 For Tailwind CSS v2
 
 ```
-npm i tailwind-clsx@~2.0.0
+npm install tailwind-clsx@~2.0.0
 ```
 
 # Demonstration
