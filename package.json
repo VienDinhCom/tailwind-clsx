@@ -1,7 +1,7 @@
 {
   "name": "tailwind-clsx",
   "description": "Utility function for conditionally joining and merging Tailwind CSS classes without style conflicts.",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "license": "MIT",
   "type": "module",
   "main": "index.cjs",
