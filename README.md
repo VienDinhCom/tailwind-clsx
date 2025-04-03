@@ -24,7 +24,7 @@ npm install tailwind-clsx@~3.0.0
 
 ### For Tailwind CSS v2
 
-Documents: [clsx](https://github.com/lukeed/clsx/tree/v2.1.1) & [tailwind-merge](https://github.com/dcastil/tailwind-merge/tree/v2.6.0)
+Documents: [clsx](https://github.com/lukeed/clsx/tree/v1.2.1) & [tailwind-merge](https://github.com/dcastil/tailwind-merge/tree/v0.9.0)
 
 ```
 npm install tailwind-clsx@~2.0.0
